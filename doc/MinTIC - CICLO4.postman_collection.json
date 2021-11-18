@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "4872d5ba-feef-4f94-ad61-a6c0f4df1395",
+		"name": "MinTIC - CICLO4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RETO1",
+			"item": [
+				{
+					"name": "LOCAL",
+					"item": [
+						{
+							"name": "User Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/user/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User New",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"fabio.quimbay@gmail.com\",\n    \"name\":\"Fabio Quimbay\",\n    \"password\":\"Password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/user/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User IsEmailPresent",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/user/fabio.quimbay@gmail.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"fabio.quimbay@gmail.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Authenticate",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/user/fabio.quimbay@gmail.com/MyPassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"fabio.quimbay@gmail.com",
+										"MyPassword"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "REMOTE",
+					"item": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://144.22.232.202"
+		}
+	]
+}
