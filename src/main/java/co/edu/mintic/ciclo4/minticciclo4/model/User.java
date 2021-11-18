@@ -1,5 +1,7 @@
 package co.edu.mintic.ciclo4.minticciclo4.model;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -10,6 +12,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "users")
+@JsonPropertyOrder({ "id", "email", "password", "name"})
 public class User implements Serializable {
 
     @Id
