@@ -23,10 +23,6 @@ public class UserService {
         return users;
     }
 
-    public Optional<User> getUser(int id) {
-        return repository.findById(id);
-    }
-
     public User save(User user) {
         if(user.getId() == null) {
             return repository.save(user);
@@ -40,29 +36,29 @@ public class UserService {
         }
     }
 
-    public User update(User user) {
+    public boolean isEmailPresent(String email) {
 
-        if(user.getId() == null) {
-            return repository.save(user);
+        if(repository.getUserByEmail(email) != null) {
+            return true;
         } else {
-            Optional<User> result = repository.findById(user.getId());
-            if(result.isPresent()) {
-
-                User existing = result.get();
-                existing.setEmail(Optional.of(user.getEmail()).orElse(existing.getEmail()));
-                existing.setPassword(Optional.of(user.getPassword()).orElse(existing.getPassword()));
-                existing.setName(Optional.of(user.getName()).orElse(existing.getName()));
-
-                return repository.save(existing);
-            } else {
-                return user;
-            }
+            return false;
         }
     }
 
-    public boolean delete(int id) {
+    public User autenticate(String email, String password) {
 
-        repository.deleteById(id);
-        return true;
+        User user = repository.getUserByEmailAAndPassword(email, password);
+
+        if (user == null) {
+
+            User newUser = new User();
+            newUser.setEmail(email);
+            newUser.setPassword(password);
+            newUser.setName("NO DEFINIDO");
+
+            return newUser;
+        } else {
+            return user;
+        }
     }
 }

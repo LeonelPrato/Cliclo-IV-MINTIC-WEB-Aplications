@@ -28,21 +28,15 @@ public class UserController {
         return service.save(user);
     }
 
-    @GetMapping("/{id}")
-    public Optional<User> getUser(@PathVariable("id") int id) {
-        return service.getUser(id);
+    @GetMapping("/{email}")
+    public boolean isEmailPresent(@PathVariable("email") String email) {
+
+        return service.isEmailPresent(email);
     }
 
+    @GetMapping("/{email}/{password}")
+    public User autenticateUser(@PathVariable("email") String email, @PathVariable("password") String password) {
 
-    @PutMapping("/update")
-    @ResponseStatus(HttpStatus.CREATED)
-    public User update(@RequestBody User user) {
-        return service.update(user);
-    }
-
-    @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable("id") int id) {
-        return service.delete(id);
+        return service.autenticate(email, password);
     }
 }

@@ -9,14 +9,12 @@ import java.io.Serializable;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@Table(name = "clients")
+@Table(name = "users")
 public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    @NotBlank(message = "Id is mandatory")
     @Column(length = 11)
-    @Size(min = 1, max = 11)
     private Integer id;
 
     @NotBlank(message = "Email is mandatory")
