@@ -39,7 +39,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"email\":\"fabio.quimbay@gmail.com\",\n    \"name\":\"Fabio Quimbay\",\n    \"password\":\"Password\"\n}",
+									"raw": "{\n    \"email\":\"ricardocorazondeleon@gmail.com\",\n    \"name\":\"RICARDO CORAZON DE LEON\",\n    \"password\":\"Demo123.\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -80,7 +80,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/user/fabio.quimbay@gmail.com",
+									"raw": "http://localhost:8080/api/user/ricardocorazondeleon@gmail.com",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -89,7 +89,7 @@
 									"path": [
 										"api",
 										"user",
-										"fabio.quimbay@gmail.com"
+										"ricardocorazondeleon@gmail.com"
 									]
 								}
 							},
@@ -113,7 +113,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/user/fabio.quimbay@gmail.com/MyPassword",
+									"raw": "http://localhost:8080/api/user/corazondeleon@gmail.com/Demo123.",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -122,8 +122,8 @@
 									"path": [
 										"api",
 										"user",
-										"fabio.quimbay@gmail.com",
-										"MyPassword"
+										"corazondeleon@gmail.com",
+										"Demo123."
 									]
 								}
 							},
