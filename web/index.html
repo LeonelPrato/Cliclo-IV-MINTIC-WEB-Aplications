@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Misi&oacute;n TIC 2022</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body>
+
+<h2>Usuarios</h2>
+
+<b>Listado de Usuarios</b>
+</br></br>
+<div id="resultUsers"></div>
+</br>
+<button onclick="getInformationUsers()">Consultar</button>
+</br></br>
+
+<b>Formulario de Creaci&oacute;n y Actualizaci&oacute;n</b>
+</br></br>
+<div>
+    <input type="hidden" id="idUser" placeholder="id">
+    <input type="text" id="emailUser" placeholder="email">
+    <input type="text" id="nameUser" placeholder="name">
+    <input type="text" id="passwordUser" placeholder="password">
+</div>
+</br></br>
+<button onclick="saveInformationUsers()">Guardar Usuario</button>
+
+</body>
+</html>
