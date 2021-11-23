@@ -42,3 +42,36 @@ function SignInUser() {
     });
 
 }
+
+function getInformationUsers(){
+    $.ajax({
+        url: "http://localhost:8080/api/user/all",
+        type: "GET",
+        datatype: "JSON",
+        success: function(responseUsers){
+            console.log(responseUsers);
+            $("#resultUsers").empty();
+            printResponseUsers(responseUsers);
+        }
+    });
+}
+
+function printResponseUsers(items){
+
+    let myTable = "<table border=1>";
+
+    myTable += "<tr><th>Id</th><th>Email</th><th>Name</th><th>Name</th></tr>";
+
+    for(i=0; i<items.length; i++) {
+        myTable += "<tr>";
+        myTable += "<td>" + items[i].id + "</td>";
+        myTable += "<td>" + items[i].email + "</td>";
+        myTable += "<td>" + items[i].name + "</td>";
+        myTable += "<td>" + items[i].password + "</td>";
+        myTable += "</tr>";
+    }
+
+    myTable += "</table>";
+
+    $("#resultUsers").append(myTable);
+}
