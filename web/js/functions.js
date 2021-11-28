@@ -15,7 +15,7 @@ function printResponseUsers(items){
 
     let myTable = "<table border=1>";
 
-    myTable += "<tr><th>Id</th><th>Email</th><th>Name</th><th>Name</th></tr>";
+    myTable += "<tr><thead><th>Id</th><th>Email</th><th>Name</th><th>Pasword</th></thead></tr>";
 
     for(i=0; i<items.length; i++) {
         myTable += "<tr>";
