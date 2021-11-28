@@ -15,7 +15,7 @@ body{
 
 header{
     background-image: linear-gradient(rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0)),url(Backgroun1.jpg);
+    rgba(0, 0, 0, 0)),url(../images/Backgroun1.jpg);
     height: 300px;
     width: 100%;
     margin: 0px;
@@ -96,7 +96,7 @@ aside{
     text-align: center;
     line-height: 120px;
     background-image: linear-gradient(rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0)),url(aside.png);
+    rgba(0, 0, 0, 0)),url(../images/aside.png);
     min-height: 500px;
     background-size: cover;
 }

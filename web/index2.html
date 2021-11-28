@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Misi&oacute;n TIC 2022</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="styleSheet" href="css/forms.css" />
+  <script type="text/javascript" src="js/forms.js"></script>
+</head>
+<body>
+
+<div id="resultLogIn"></div>
+
+<div class="login-page">
+  <div class="form">
+    <form class="register-form" action="javascript:SignInUser()">
+      <input type="text" name="nameSignIn" placeholder="name"/>
+      <input type="password" name="passwordSignIn" placeholder="password"/>
+      <input type="text" name="emailSignIn" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">¿Ya tienes cuenta? <a href="#">Inicia sesión aqu&iacute;</a></p>
+    </form>
+    <form class="login-form" action="javascript:authenticateUser()">
+      <input type="text" name="emailLogIn" placeholder="email"/>
+      <input type="password" name="passwordLogIn" placeholder="password"/>
+      <button>login</button>
+      <p class="message">¿No tienes cuenta? <a href="#">Crea tu cuenta aqu&iacute;</a></p>
+    </form>
+  </div>
+</div>
+
+<div>
+  <button onclick="getInformationUsers()">Consultar</button>
+  <div id="resultUsers"></div>
+</div>
+
+<script type="text/javascript" src="js/forms.js"></script>
+
+</script>
+
+</body>
+</html>
