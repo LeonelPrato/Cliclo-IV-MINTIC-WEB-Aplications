@@ -57,10 +57,10 @@ function getInformationUsers(){
 }
 
 function printResponseUsers(items){
-
+    
     let myTable = "<table border=1>";
 
-    myTable += "<tr><th>Id</th><th>Email</th><th>Name</th><th>Name</th></tr>";
+    myTable += "<tr><th>Id</th><th>Email</th><th>Name</th><th>Pasword</th></tr>";
 
     for(i=0; i<items.length; i++) {
         myTable += "<tr>";
